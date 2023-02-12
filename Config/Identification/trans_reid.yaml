@@ -1,0 +1,22 @@
+# 登録したTracker情報を格納したディレクトリ
+# ディレクトリ構成は下記の通り
+# RegisteredTracker ┳ Image         : trackerの画像データ群
+#                   ┗ Information   : trackerの情報を格納したjsonファイル
+tracker_dir: "RegisteredTracker/"
+
+# Trans-ReIDモデルの設定値
+model_settings_path: "Library/TransReID/configs/Market/vit_transreid.yml"
+
+# 重みファイル
+weights_path: "Weights/TransReID/vit_transreid_market.pth"
+
+# device  ->  "cpu", "gpu"から選択
+device: "gpu"
+
+# reid_thresholdよりthresholdが大きい場合は登録されていない人物と扱う
+reid_threshold: 600
+
+# 入力画像サイズ (上からwidth, height)
+input_size:
+  - 128
+  - 256

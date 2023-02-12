@@ -1,0 +1,43 @@
+# デモの種類  ->  "image", "video", "webcam" から選択
+demo: "image" 
+
+experiment_name: null
+
+# 推論対象の画像のディレクトリ、画像、videoのパス
+data_path: "TestData/Image"
+
+# モデルの名前
+name: null
+
+# カメラid
+camid: null
+
+# 推論結果を保存するか否か  ->  true: 保存, false: 保存しない
+save_result: true
+
+# 保存先
+output_dir: "RegisteredTracker"
+
+# experiment file
+exp_file: "Library/ByteTrack/exps/default/yolox_x.py"
+
+# 重みファイル
+weights_path: "Weights/YOLOX/yolox_x.pth"
+
+# device  ->  "cpu", "gpu"から選択
+device: "gpu"
+
+# confidence_score threshold
+confidence: 0.3
+
+# non-maximum supression ( nms ) threshold
+nms: 0.3
+
+# img size
+img_size: null
+
+# fp16 ( 半精度浮動小数点数 ) での推論とするか否か  -> true: fp16で推論, false: fp32で計算
+fp16: false
+
+# trt ->  TensorRTを使用するか否か 
+trt: false

@@ -1,0 +1,72 @@
+# デモの種類  ->  "image", "video", "webcam" から選択
+demo: "video" 
+
+experiment_name: null
+
+# モデルの名前
+name: null
+
+# 推論対象のvideoのパス
+data_path: "TestData/Movie/IMG_2556.mp4"
+
+# カメラid
+camid: null
+
+# 推論結果を保存するか否か  ->  true: 保存, false: 保存しない
+save_result: true
+
+# 保存先
+output_dir: "RegisteredTracker"
+
+# distributed backend
+dist_backend: "nccl"
+
+# experiment file
+exp_file: "Library/ByteTrack/exps/example/mot/yolox_s_mix_det.py.py"
+
+# 重みファイル
+weights_path: "Weights/ByteTrack/bytetrack_s_mot17.pth.tar"
+
+# device  ->  "cpu", "gpu"から選択
+device: "gpu"
+
+# confidence_score threshold
+# recommendation: 0.85
+confidence: 0.86
+
+# non-maximum supression ( nms ) threshold
+# recommendation: 0.3
+nms: 0.3
+
+# img size
+img_size: null
+
+# fp16 ( 半精度浮動小数点数 ) での推論とするか否か  -> true: fp16で推論, false: fp32で計算
+fp16: false
+
+# trt ->  TensorRTを使用するか否か 
+trt: false
+
+# fps
+fps: 30
+
+# tracking confidence threshold
+# recommendation: 0.5
+track_thresh: 0.5
+
+# the frames for keep lost track
+track_buffer: 30
+
+# matching threshold for tracking
+# recommendation: 0.35
+match_thresh: 0.35
+
+# threshold for filtering out boxes of which aspect ratio are above the given value.
+aspect_ratio_thresh: 1.6
+
+# filter out tiny boxes
+min_box_area: 10
+
+# test mot20
+mot20: false
+
